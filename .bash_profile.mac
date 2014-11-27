@@ -1,0 +1,37 @@
+#!/bin/bash
+echo "Loading profile for $USER"
+
+# environment variables
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk
+export PATH=/Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home/bin/:$PATH
+
+# alias run
+alias rp="source ~/.bash_profile"
+alias md="mongod --fork --logpath ~/development/database/mongo/log/mongod.log --dbpath ~/development/database/mongo/data/db"
+
+# alias navigation
+alias code="cd $HOME/development/code"
+alias sk="code; cd personal/github/learning-scala/scala-katas"
+
+# text mate
+export TEXT_MATE_HOME="/Applications/TextMate.app/Contents/Resources"
+export PATH=$TEXT_MATE_HOME:$PATH 
+
+# git
+alias gco="git checkout"
+alias gpr="git pull --rebase" 
+alias gb="git branch"
+alias gs="git status"
+alias gdb="git branch -D"
+alias gfo="git fetch origin"
+alias gr="git reset --hard; git clean -fd"
+alias gac="git add -A && git commit"
+
+# HMRC
+export WORKSPACE=$HOME/development/code/hmrc
+
+export HMRC="$HOME/development/code/hmrc"
+alias cc="cd $HMRC/cato-calculators"
+alias cf="cd $HMRC/cato-filing"
+alias ca="cd $HMRC/cato-acceptance-tests"
+alias cfe="cd $HMRC/cato-frontend"
